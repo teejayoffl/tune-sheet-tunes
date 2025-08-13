@@ -18,9 +18,9 @@ All colors MUST be HSL.
     --popover: 0 0% 10%;
     --popover-foreground: 0 0% 95%;
 
-    /* Spotify signature green */
-    --primary: 141 73% 42%;
-    --primary-foreground: 0 0% 6%;
+    /* Beautiful gradient blue theme */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 98%;
 
     --secondary: 0 0% 12%;
     --secondary-foreground: 0 0% 85%;
@@ -28,8 +28,8 @@ All colors MUST be HSL.
     --muted: 0 0% 15%;
     --muted-foreground: 0 0% 60%;
 
-    --accent: 141 73% 42%;
-    --accent-foreground: 0 0% 6%;
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
@@ -38,14 +38,16 @@ All colors MUST be HSL.
     --input: 0 0% 15%;
     --ring: 141 73% 42%;
 
-    /* Custom gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(141 73% 42%), hsl(141 73% 35%));
-    --gradient-hero: linear-gradient(135deg, hsl(141 73% 42%) 0%, hsl(141 73% 35%) 50%, hsl(0 0% 8%) 100%);
+    /* Custom gradients with beautiful blues */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(217 91% 50%));
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(217 91% 45%) 50%, hsl(0 0% 8%) 100%);
     --gradient-card: linear-gradient(145deg, hsl(0 0% 10%), hsl(0 0% 8%));
     
-    /* Shadows */
-    --shadow-glow: 0 0 40px hsl(141 73% 42% / 0.3);
+    /* Shadows with blue glow */
+    --shadow-glow: 0 0 40px hsl(217 91% 60% / 0.3);
     --shadow-card: 0 10px 30px -10px hsl(0 0% 0% / 0.3);
+
+    --ring: 217 91% 60%;
 
     --radius: 0.5rem;
 
@@ -77,8 +79,8 @@ All colors MUST be HSL.
     --popover: 0 0% 10%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 141 73% 42%;
-    --primary-foreground: 0 0% 6%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 98%;
 
     --secondary: 0 0% 12%;
     --secondary-foreground: 0 0% 85%;
@@ -86,15 +88,15 @@ All colors MUST be HSL.
     --muted: 0 0% 15%;
     --muted-foreground: 0 0% 60%;
 
-    --accent: 141 73% 42%;
-    --accent-foreground: 0 0% 6%;
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 0 0% 20%;
     --input: 0 0% 15%;
-    --ring: 141 73% 42%;
+    --ring: 217 91% 60%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
