@@ -28,7 +28,7 @@ const Footer = () => {
           <div className="space-y-4">
             <Logo showText={true} />
             <p className="text-muted-foreground">
-              Your trusted partner in digital accounting. We make financial management simple, efficient, and accessible.
+              Your trusted UK chartered accountants. We make financial management simple, efficient, and compliant with HMRC regulations.
             </p>
             <div className="flex space-x-4">
               <Button variant="ghost" size="icon" className="hover:bg-primary/10">
@@ -51,13 +51,23 @@ const Footer = () => {
             <h3 className="font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
+                <Link to="/what-we-do" className="text-muted-foreground hover:text-primary transition-colors">
+                  What We Do
+                </Link>
+              </li>
+              <li>
                 <Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">
                   Services
                 </Link>
               </li>
               <li>
+                <Link to="/locations" className="text-muted-foreground hover:text-primary transition-colors">
+                  Locations
+                </Link>
+              </li>
+              <li>
                 <Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors">
-                  Blog
+                  Insights
                 </Link>
               </li>
               <li>
@@ -79,12 +89,12 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link to="/services/tax-preparation" className="text-muted-foreground hover:text-primary transition-colors">
-                  Tax Preparation
+                  Self Assessment
                 </Link>
               </li>
               <li>
                 <Link to="/services/bookkeeping" className="text-muted-foreground hover:text-primary transition-colors">
-                  Bookkeeping
+                  Bookkeeping & VAT
                 </Link>
               </li>
               <li>
@@ -94,7 +104,17 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/services/payroll" className="text-muted-foreground hover:text-primary transition-colors">
-                  Payroll Services
+                  Payroll & PAYE
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/company-accounts" className="text-muted-foreground hover:text-primary transition-colors">
+                  Company Accounts
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/corporation-tax" className="text-muted-foreground hover:text-primary transition-colors">
+                  Corporation Tax
                 </Link>
               </li>
             </ul>
@@ -106,15 +126,15 @@ const Footer = () => {
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-muted-foreground">
                 <Mail className="w-4 h-4" />
-                <span>hello@digitalaccountant.com</span>
+                <span>hello@digitalaccountant.co.uk</span>
               </div>
               <div className="flex items-center space-x-2 text-muted-foreground">
                 <Phone className="w-4 h-4" />
-                <span>+1 (555) 123-4567</span>
+                <span>020 7123 4567</span>
               </div>
-              <div className="flex items-center space-x-2 text-muted-foreground">
-                <MapPin className="w-4 h-4" />
-                <span>San Francisco, CA</span>
+              <div className="flex items-start space-x-2 text-muted-foreground">
+                <MapPin className="w-4 h-4 mt-0.5" />
+                <span>123 Moorgate<br />London EC2R 6DN</span>
               </div>
             </div>
             
@@ -139,7 +159,7 @@ const Footer = () => {
         <div className="border-t border-border/50 pt-8 mt-8">
           <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
             <p className="text-sm text-muted-foreground">
-              © 2024 Digital Accountant. All rights reserved.
+              © 2024 Digital Accountant UK Ltd. Registered in England & Wales. Company No. 12345678.
             </p>
             <div className="flex space-x-6">
               <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">

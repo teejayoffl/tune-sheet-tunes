@@ -9,8 +9,10 @@ const Navigation = () => {
   const location = useLocation();
   
   const navLinks = [
+    { href: "/what-we-do", label: "What We Do" },
     { href: "/services", label: "Services" },
-    { href: "/blog", label: "Blog" },
+    { href: "/locations", label: "Locations" },
+    { href: "/blog", label: "Insights" },
     { href: "/#about", label: "About" },
     { href: "/#contact", label: "Contact" },
   ];

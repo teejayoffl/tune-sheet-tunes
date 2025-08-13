@@ -11,6 +11,15 @@ const Hero = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const partnerLogos = [
+    { name: "HMRC", text: "HMRC Recognised" },
+    { name: "ACCA", text: "ACCA Certified" },
+    { name: "CIMA", text: "CIMA Member" },
+    { name: "Xero", text: "Xero Partner" },
+    { name: "QuickBooks", text: "QB ProAdvisor" },
+    { name: "Sage", text: "Sage Partner" }
+  ];
+
   return (
     <section className="min-h-screen flex items-center relative overflow-hidden">
       {/* Animated Background */}
@@ -31,7 +40,7 @@ const Hero = () => {
             {/* Animated badge */}
             <div className="inline-flex items-center space-x-2 bg-primary/10 backdrop-blur-sm border border-primary/20 rounded-full px-4 py-2 animate-fade-in">
               <Zap className="w-4 h-4 text-primary animate-pulse" />
-              <span className="text-sm font-medium text-primary">AI-Powered Financial Intelligence</span>
+              <span className="text-sm font-medium text-primary">UK's Leading Digital Accountancy</span>
             </div>
 
             <div className="space-y-4 animate-fade-in" style={{ animationDelay: "0.1s" }}>
@@ -52,8 +61,8 @@ const Hero = () => {
                 Starts Here
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg">
-                Experience accounting like never before. Our digital platform harmonizes your finances 
-                with the precision of a perfectly orchestrated playlist.
+                Expert UK accountancy services with a digital edge. From HMRC compliance to 
+                year-end accounts, we harmonise your finances with precision and clarity.
               </p>
             </div>
 
@@ -81,9 +90,9 @@ const Hero = () => {
             {/* Stats with glass morphism */}
             <div className="flex gap-6 pt-8 animate-fade-in" style={{ animationDelay: "0.3s" }}>
               {[
-                { value: "500+", label: "Happy Clients", icon: Shield },
-                { value: "$2M+", label: "Managed", icon: TrendingUp },
-                { value: "98%", label: "Accuracy", icon: Zap }
+                { value: "500+", label: "UK Clients", icon: Shield },
+                { value: "£2M+", label: "Tax Saved", icon: TrendingUp },
+                { value: "98%", label: "HMRC Success", icon: Zap }
               ].map((stat, index) => (
                 <div 
                   key={index}
@@ -98,6 +107,24 @@ const Hero = () => {
                 </div>
               ))}
             </div>
+
+            {/* Partner Logos - Faded */}
+            <div className="pt-8 animate-fade-in" style={{ animationDelay: "0.5s" }}>
+              <p className="text-xs text-muted-foreground/60 mb-4 uppercase tracking-wider">Trusted by</p>
+              <div className="flex flex-wrap gap-6 items-center">
+                {partnerLogos.map((partner, index) => (
+                  <div 
+                    key={index}
+                    className="opacity-40 hover:opacity-60 transition-opacity duration-300"
+                    style={{ animationDelay: `${0.6 + index * 0.05}s` }}
+                  >
+                    <div className="text-muted-foreground/50 font-medium text-sm">
+                      {partner.text}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Right Content - Interactive Dashboard Preview */}
@@ -110,8 +137,8 @@ const Hero = () => {
                     <TrendingUp className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground">Revenue Growth</p>
-                    <p className="text-lg font-bold">+24.5%</p>
+                    <p className="text-sm text-muted-foreground">VAT Returns</p>
+                    <p className="text-lg font-bold">On Time</p>
                   </div>
                 </div>
               </div>
@@ -122,8 +149,8 @@ const Hero = () => {
                     <Shield className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground">Tax Saved</p>
-                    <p className="text-lg font-bold">$12,450</p>
+                    <p className="text-sm text-muted-foreground">Corporation Tax</p>
+                    <p className="text-lg font-bold">£12,450 Saved</p>
                   </div>
                 </div>
               </div>
@@ -147,7 +174,7 @@ const Hero = () => {
                   
                   {/* Mock metrics */}
                   <div className="grid grid-cols-2 gap-4">
-                    {["Total Revenue", "Expenses", "Profit Margin", "Tax Rate"].map((label, i) => (
+                    {["Annual Revenue", "Expenses", "Net Profit", "Tax Rate"].map((label, i) => (
                       <div key={i} className="space-y-1">
                         <p className="text-xs text-muted-foreground">{label}</p>
                         <div className="h-2 bg-muted/50 rounded-full overflow-hidden">
