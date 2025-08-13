@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -23,19 +24,25 @@ const Hero = () => {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
+                asChild
                 size="lg" 
                 className="bg-gradient-primary hover:opacity-90 shadow-glow group"
               >
-                Start Your Journey
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <Link to="/services">
+                  Start Your Journey
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </Button>
               <Button 
+                asChild
                 variant="outline" 
                 size="lg"
                 className="border-primary text-primary hover:bg-primary/10"
               >
-                <Play className="w-5 h-5 mr-2" />
-                Watch Demo
+                <Link to="/blog">
+                  <Play className="w-5 h-5 mr-2" />
+                  Read Insights
+                </Link>
               </Button>
             </div>
 
