@@ -1,0 +1,117 @@
+{
+  "slug": "corporation-tax-rates-2024",
+  "title": "Corporation Tax Rates 2024: Complete UK Guide",
+  "description": "Everything you need to know about UK corporation tax rates for 2024/25, including small profits rate, marginal relief calculations, and tax planning strategies.",
+  "category": "Corporation Tax",
+  "publishedDate": "2024-01-15",
+  "modifiedDate": "2024-01-15",
+  "readTime": "10 min read",
+  "author": "TaxBlog UK",
+  "keywords": [
+    "corporation tax rates",
+    "uk corporation tax 2024",
+    "small profits rate",
+    "marginal relief",
+    "main rate corporation tax",
+    "corporate tax uk",
+    "associated companies",
+    "tax year 2024/25",
+    "hmrc corporation tax",
+    "business tax rates"
+  ],
+  "content": "<h2>UK Corporation Tax Rates for 2024/25</h2><p>Understanding corporation tax rates is crucial for effective business planning. Since April 2023, the UK has operated a two-tier corporation tax system with different rates depending on your company's profits.</p><h3>Current Corporation Tax Rates</h3><ul><li><strong>Small profits rate: 19%</strong> - For companies with profits up to £50,000</li><li><strong>Main rate: 25%</strong> - For companies with profits over £250,000</li><li><strong>Marginal rate: 26.5%</strong> - Effective rate on profits between £50,000 and £250,000</li></ul><p>These rates apply to accounting periods beginning on or after 1 April 2023.</p><h2>Understanding the Small Profits Rate</h2><p>The small profits rate of 19% applies to companies with taxable profits not exceeding £50,000. This rate helps smaller businesses maintain more working capital for growth and investment.</p><h3>Key Points:</h3><ul><li>Applies automatically - no election needed</li><li>Based on total taxable profits, not turnover</li><li>Includes all income subject to corporation tax</li><li>Pro-rated for accounting periods shorter than 12 months</li></ul><h2>Marginal Relief: The Middle Ground</h2><p>Companies with profits between £50,000 and £250,000 benefit from marginal relief, which creates a gradual transition between the small profits rate and main rate.</p><h3>How Marginal Relief Works</h3><p>The marginal relief calculation ensures a smooth progression of tax rates:</p><ol><li>Calculate tax at the main rate (25%)</li><li>Apply the marginal relief fraction: 3/200</li><li>Relief = (Upper limit - Profits) × 3/200</li><li>Tax due = Main rate tax - Marginal relief</li></ol><h3>Example Calculation</h3><p>For a company with £150,000 profits:</p><ul><li>Tax at main rate: £150,000 × 25% = £37,500</li><li>Marginal relief: (£250,000 - £150,000) × 3/200 = £1,500</li><li>Tax due: £37,500 - £1,500 = £36,000</li><li>Effective rate: 24%</li></ul><h2>Associated Companies Rules</h2><p>The profit thresholds are divided by the number of associated companies plus one. This prevents tax avoidance through company splitting.</p><h3>What Makes Companies Associated?</h3><ul><li>One company controls another</li><li>Both under common control</li><li>Control generally means >50% ownership</li><li>Includes worldwide companies</li></ul><h3>Impact on Thresholds</h3><p>With associated companies, the thresholds become:</p><ul><li>Lower limit: £50,000 ÷ (number of associates + 1)</li><li>Upper limit: £250,000 ÷ (number of associates + 1)</li></ul><h2>Special Rates and Reliefs</h2><h3>Patent Box Rate: 10%</h3><p>Companies can elect for a 10% rate on profits from patented inventions and certain other intellectual property.</p><h3>R&D Tax Credits</h3><ul><li>SME scheme: 186% deduction (effectively 21.5% credit)</li><li>RDEC scheme: 20% credit for large companies</li><li>Enhanced support for R&D intensive companies</li></ul><h3>Creative Industries Reliefs</h3><p>Special reliefs available for:</p><ul><li>Film production</li><li>Animation and children's TV</li><li>Video games development</li><li>Theatre productions</li></ul><h2>Planning for Corporation Tax</h2><h3>Key Strategies</h3><ol><li><strong>Timing of Expenses</strong><ul><li>Accelerate deductible expenses before rate increases</li><li>Consider capital allowances timing</li></ul></li><li><strong>Dividend vs Salary Planning</strong><ul><li>Balance corporation tax and personal tax efficiency</li><li>Consider pension contributions</li></ul></li><li><strong>Group Structure Review</strong><ul><li>Assess impact of associated companies rules</li><li>Consider group relief opportunities</li></ul></li><li><strong>Investment Planning</strong><ul><li>Maximize capital allowances</li><li>Consider Annual Investment Allowance (£1 million)</li></ul></li></ol><h2>Key Dates and Deadlines</h2><ul><li><strong>Payment deadline</strong>: 9 months and 1 day after accounting period end</li><li><strong>Filing deadline</strong>: 12 months after accounting period end</li><li><strong>Quarterly instalments</strong>: Required for large companies (profits >£1.5m)</li></ul><h2>Recent Changes and Future Outlook</h2><p>The reintroduction of the small profits rate in April 2023 marked a significant change from the previous flat 19% rate. This tiered system aims to:</p><ul><li>Support smaller businesses with lower rates</li><li>Generate additional revenue from larger corporations</li><li>Maintain UK competitiveness internationally</li></ul><p>Future considerations include potential adjustments to thresholds and ongoing discussions about digital services taxation.</p>",
+  "tableData": {
+    "title": "Corporation Tax Rates by Profit Level",
+    "columns": [
+      { "header": "Profit Range", "accessor": "range" },
+      { "header": "Tax Rate", "accessor": "rate", "align": "center" },
+      { "header": "Effective Rate", "accessor": "effective", "align": "center" },
+      { "header": "Tax on £100k Profit", "accessor": "tax100k", "align": "right", "format": (value) => `£${value.toLocaleString()}` }
+    ],
+    "data": [
+      {
+        "range": "£0 - £50,000",
+        "rate": "19%",
+        "effective": "19%",
+        "tax100k": 9500
+      },
+      {
+        "range": "£50,001 - £100,000",
+        "rate": "26.5% (marginal)",
+        "effective": "19% - 22.75%",
+        "tax100k": 22750
+      },
+      {
+        "range": "£100,001 - £150,000",
+        "rate": "26.5% (marginal)",
+        "effective": "22.75% - 24%",
+        "tax100k": 22750
+      },
+      {
+        "range": "£150,001 - £250,000",
+        "rate": "26.5% (marginal)",
+        "effective": "24% - 25%",
+        "tax100k": 22750
+      },
+      {
+        "range": "Over £250,000",
+        "rate": "25%",
+        "effective": "25%",
+        "tax100k": 25000
+      }
+    ]
+  },
+  "chartData": {
+    "type": "line",
+    "title": "Effective Corporation Tax Rate by Profit Level",
+    "data": [
+      { "profit": 0, "rate": 19, "tax": 0 },
+      { "profit": 50000, "rate": 19, "tax": 9500 },
+      { "profit": 100000, "rate": 22.75, "tax": 22750 },
+      { "profit": 150000, "rate": 24, "tax": 36000 },
+      { "profit": 200000, "rate": 24.5, "tax": 49000 },
+      { "profit": 250000, "rate": 25, "tax": 62500 },
+      { "profit": 300000, "rate": 25, "tax": 75000 },
+      { "profit": 400000, "rate": 25, "tax": 100000 }
+    ],
+    "config": {
+      "dataKey": "rate",
+      "xAxisKey": "profit",
+      "colors": ["#0ea5e9"]
+    }
+  },
+  "faqs": [
+    {
+      "question": "When do I pay corporation tax at 25% instead of 19%?",
+      "answer": "You pay the main rate of 25% when your company's taxable profits exceed £250,000. If profits are between £50,000 and £250,000, you'll pay an effective rate between 19% and 25% due to marginal relief. Companies with profits up to £50,000 pay only 19%."
+    },
+    {
+      "question": "How do associated companies affect my corporation tax rate?",
+      "answer": "Associated companies share the rate thresholds. For example, if you have one associated company, the £50,000 and £250,000 limits are halved to £25,000 and £125,000. This prevents artificial splitting of businesses to benefit from lower rates."
+    },
+    {
+      "question": "What is marginal relief and how is it calculated?",
+      "answer": "Marginal relief smooths the transition between the 19% and 25% rates for profits between £50,000 and £250,000. It's calculated as (Upper limit - Taxable profits) × 3/200. This creates an effective marginal rate of 26.5% on profits in this band."
+    },
+    {
+      "question": "Can I still claim R&D tax credits with the new rates?",
+      "answer": "Yes, R&D tax credits remain available. The SME scheme offers 186% deduction, while large companies use the RDEC scheme with a 20% credit. From April 2024, there are enhanced rates for R&D intensive companies spending over 30% on R&D."
+    },
+    {
+      "question": "Do the new rates apply to all companies?",
+      "answer": "The rates apply to most UK companies, but there are exceptions. Companies in the Patent Box regime pay 10% on relevant profits, and some oil and gas companies pay higher rates. Investment companies may have different rules for certain income types."
+    },
+    {
+      "question": "How do I know if companies are 'associated' for tax purposes?",
+      "answer": "Companies are associated if one controls another (usually >50% ownership) or both are under common control. This includes overseas companies and dormant companies (with exceptions). The test applies at the end of the previous accounting period."
+    },
+    {
+      "question": "What happens if my accounting period straddles the rate change?",
+      "answer": "If your accounting period spans 1 April 2023, profits are time-apportioned. The portion before April 2023 is taxed at 19%, while the portion after is subject to the new tiered rates. HMRC provides guidance on precise calculations."
+    },
+    {
+      "question": "Is dividend tax affected by the corporation tax changes?",
+      "answer": "Corporation tax changes don't directly affect dividend tax rates, but they impact the profits available for distribution. Higher corporation tax means less post-tax profit for dividends, affecting overall tax efficiency for owner-managed businesses."
+    }
+  ]
+}
