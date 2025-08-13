@@ -1,34 +1,53 @@
 import { Button } from "@/components/ui/button";
-import { Calculator, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import Logo from "@/components/Logo";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+  
+  const navLinks = [
+    { href: "/services", label: "Services" },
+    { href: "/blog", label: "Blog" },
+    { href: "/#about", label: "About" },
+    { href: "/#contact", label: "Contact" },
+  ];
+
+  const isActive = (href: string) => {
+    if (href.startsWith("/#")) {
+      return location.pathname === "/" && location.hash === href.substring(1);
+    }
+    return location.pathname === href;
+  };
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-              <Calculator className="w-5 h-5 text-primary-foreground" />
-            </div>
-            <span className="text-xl font-bold text-foreground">Digital Accountant</span>
-          </div>
+          <Link to="/" className="hover:opacity-90 transition-opacity">
+            <Logo />
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#services" className="text-muted-foreground hover:text-primary transition-colors">
-              Services
-            </a>
-            <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">
-              About
-            </a>
-            <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">
-              Contact
-            </a>
-            <Button variant="default" size="sm" className="bg-gradient-primary hover:opacity-90">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                to={link.href}
+                className={`text-muted-foreground hover:text-primary transition-colors relative ${
+                  isActive(link.href) ? "text-primary" : ""
+                }`}
+              >
+                {link.label}
+                {isActive(link.href) && (
+                  <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary rounded-full" />
+                )}
+              </Link>
+            ))}
+            <Button variant="default" size="sm" className="bg-gradient-primary hover:opacity-90 shadow-glow">
               Get Started
             </Button>
           </div>
@@ -47,17 +66,20 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border">
+          <div className="md:hidden py-4 border-t border-border animate-fade-in">
             <div className="flex flex-col space-y-3">
-              <a href="#services" className="text-muted-foreground hover:text-primary transition-colors">
-                Services
-              </a>
-              <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">
-                About
-              </a>
-              <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">
-                Contact
-              </a>
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className={`text-muted-foreground hover:text-primary transition-colors ${
+                    isActive(link.href) ? "text-primary" : ""
+                  }`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
               <Button variant="default" size="sm" className="bg-gradient-primary hover:opacity-90 w-fit">
                 Get Started
               </Button>
