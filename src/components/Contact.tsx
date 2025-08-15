@@ -30,11 +30,11 @@ const Contact = () => {
     <section id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-4">
             Let's Start Your Financial
             <span className="text-primary block">Success Story</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
             Ready to transform your accounting experience? Get in touch and let's compose your financial future together.
           </p>
         </div>
@@ -73,7 +73,7 @@ const Contact = () => {
                 <Button 
                   type="submit" 
                   size="lg" 
-                  className="w-full bg-gradient-primary hover:opacity-90 shadow-glow group"
+                  className="w-full bg-gradient-primary hover:opacity-90 shadow-glow group text-base py-6"
                 >
                   Send Message
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />

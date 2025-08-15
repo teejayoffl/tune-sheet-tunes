@@ -16,17 +16,17 @@ const stats = [
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-muted/20">
+    <section id="about" className="py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-4">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground">
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground">
                 Why Choose Our
                 <span className="text-primary block">Digital Platform?</span>
               </h2>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg sm:text-xl text-muted-foreground">
                 We've revolutionized accounting by combining traditional expertise with 
                 cutting-edge technology, creating an experience as smooth as your favorite playlist.
               </p>
@@ -43,7 +43,7 @@ const About = () => {
 
             <Button 
               size="lg" 
-              className="bg-gradient-primary hover:opacity-90 shadow-glow"
+              className="bg-gradient-primary hover:opacity-90 shadow-glow text-base px-8 py-6"
             >
               Learn More About Us
             </Button>
