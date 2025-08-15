@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, TrendingUp, Shield, Zap } from "lucide-react";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -21,7 +22,7 @@ const Hero = () => {
   ];
 
   return (
-    <section className="min-h-screen flex items-center relative overflow-hidden">
+    <section className="min-h-screen flex items-center relative overflow-hidden py-20">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-hero">
         {/* Animated gradient orbs */}
@@ -33,10 +34,10 @@ const Hero = () => {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" xmlns="http://www.w3.org/2000/svg"%3E%3Cdefs%3E%3Cpattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse"%3E%3Cpath d="M 60 0 L 0 0 0 60" fill="none" stroke="white" stroke-width="0.5" opacity="0.1"/%3E%3C/pattern%3E%3C/defs%3E%3Crect width="100%25" height="100%25" fill="url(%23grid)"/%3E%3C/svg%3E')] opacity-30" />
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-16 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-8">
+          <div className="space-y-8 max-w-2xl">
             {/* Animated badge */}
             <div className="inline-flex items-center space-x-2 bg-primary/10 backdrop-blur-sm border border-primary/20 rounded-full px-4 py-2 animate-fade-in">
               <Zap className="w-4 h-4 text-primary animate-pulse" />
@@ -44,7 +45,7 @@ const Hero = () => {
             </div>
 
             <div className="space-y-4 animate-fade-in" style={{ animationDelay: "0.1s" }}>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground leading-tight">
                 Your Financial
                 <span className="relative">
                   <span className="text-primary block">Symphony</span>
@@ -60,7 +61,7 @@ const Hero = () => {
                 </span>
                 Starts Here
               </h1>
-              <p className="text-lg text-muted-foreground max-w-lg">
+              <p className="text-lg sm:text-xl text-muted-foreground max-w-xl">
                 Expert UK accountancy services with a digital edge. From HMRC compliance to 
                 year-end accounts, we harmonise your finances with precision and clarity.
               </p>
@@ -69,7 +70,7 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: "0.2s" }}>
               <Button 
                 size="lg" 
-                className="bg-gradient-primary hover:opacity-90 shadow-glow group relative overflow-hidden"
+                className="bg-gradient-primary hover:opacity-90 shadow-glow group relative overflow-hidden text-base px-8 py-6"
               >
                 <span className="relative z-10 flex items-center">
                   Start Your Journey
@@ -77,18 +78,20 @@ const Hero = () => {
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-primary to-primary/80 animate-shimmer" />
               </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="border-primary/20 text-primary hover:bg-primary/10 backdrop-blur-sm"
-              >
-                <Play className="w-5 h-5 mr-2" />
-                Watch Demo
-              </Button>
+              <Link to="/digital-accountant">
+                <Button 
+                  variant="outline" 
+                  size="lg"
+                  className="border-primary/20 text-primary hover:bg-primary/10 backdrop-blur-sm text-base px-8 py-6"
+                >
+                  <Play className="w-5 h-5 mr-2" />
+                  Learn More
+                </Button>
+              </Link>
             </div>
 
             {/* Stats with glass morphism */}
-            <div className="flex gap-6 pt-8 animate-fade-in" style={{ animationDelay: "0.3s" }}>
+            <div className="grid grid-cols-3 gap-4 pt-8 animate-fade-in" style={{ animationDelay: "0.3s" }}>
               {[
                 { value: "500+", label: "UK Clients", icon: Shield },
                 { value: "£2M+", label: "Tax Saved", icon: TrendingUp },
@@ -128,7 +131,7 @@ const Hero = () => {
           </div>
 
           {/* Right Content - Interactive Dashboard Preview */}
-          <div className="relative animate-slide-up" style={{ animationDelay: "0.2s" }}>
+          <div className="relative animate-slide-up lg:pl-12" style={{ animationDelay: "0.2s" }}>
             <div className="relative" style={{ transform: `translateY(${scrollY * 0.1}px)` }}>
               {/* Glass morphism cards */}
               <div className="absolute -top-8 -right-8 backdrop-blur-md bg-card/40 border border-border/50 rounded-xl p-4 shadow-xl animate-float z-10">
